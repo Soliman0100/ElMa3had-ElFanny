@@ -1,0 +1,186 @@
+:root {
+    --main-color: #2196f3;
+    --main-color-alt: #1787e0;
+    --light-777: #7777771c;
+    --sec-back-color: #ececec;
+    --cyan: #03a9f4;
+    --light-red: #f44036;
+    --light-green: #009688;
+}
+.sec-land {
+    padding: 20px 0;
+}
+
+.sec-land .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+.sec-land .container .box {
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.sec-land .container .image {
+    position: relative;
+    overflow: hidden;
+}
+
+
+.sec-land .container .image::before {
+    content: "";
+    position: absolute;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.Quality .image::before {
+    background-color: rgb(244 64 54 / 42%);
+}
+
+.Quality h3::before {
+    background-color: var(--light-red);
+}
+
+.Time .image::before {
+    background-color: rgb(0 150 136 / 60%);
+}
+
+.Time h3::before {
+    background-color: var(--light-green);
+}
+
+.Passion .image::before {
+    background-color: rgb(3 169 244 / 60%);
+}
+
+.Passion h3::before {
+    background-color: var(--cyan);
+}
+
+    .container .image::after {
+    content: "";
+    position: absolute;
+    border-width: 0px 0px 200px 650px;
+    border-style: solid;
+    border-color: transparent transparent white transparent;
+    bottom: 0;
+    right: 0;
+    transition: .5s;
+}
+
+    .container .box:hover .image::after {
+    border-width: 0px 550px 230px 0px;
+    border-style: solid;
+    border-color: transparent transparent white transparent;
+    bottom: 0;
+    right: 0;
+}
+
+    .container img {
+    width: 100%;
+}
+
+    .container h3 {
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 2rem;
+    position: relative;
+}
+
+    .container h3::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    width: calc(100% - 30px);
+    left: 50%;
+    transform: translateX(-50%);
+    height: 5px;
+}
+
+    .container p {
+    margin:20px 10px 0px 10px;
+    font-size: 20px;
+    line-height: 1.8;
+    color: #777;
+}
+
+    .container .link {
+    width: fit-content;
+    margin: 30px auto;
+    padding: 10px 25px;
+    border-radius: 5px;
+    border: 3px solid;
+    position: relative;
+}
+    @media (max-width: 767px) {
+        .container .link{
+            padding: 10px;
+        }
+    }
+    .container .box .link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    transition: .5s;
+}
+
+    .container .Quality .link::before {
+    background-color: var(--light-red);
+}
+
+    .container .Time .link::before {
+    background-color: var(--light-green);
+
+}
+
+    .container .Passion .link::before {
+    background-color: var(--cyan);
+
+}
+
+    .container .box:hover .link::before {
+    width: 100%;
+}
+
+    .container .Quality .link {
+    border-color: var(--light-red);
+}
+
+    .container .Quality .link a {
+    color: var(--light-red);
+}
+
+    .container .Passion .link {
+    border-color: var(--cyan);
+}
+
+    .container .Passion .link a {
+    color: var(--cyan);
+}
+
+    .container .Time .link {
+    border-color: var(--light-green);
+}
+
+    .container .Time .link a {
+    color: var(--light-green);
+}
+
+    .container .box a {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    transition: .5s;
+    position: relative;
+}
+
+    .container .box:hover a {
+    color: white;
+}

@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "Cairo", sans-serif;
+}
+a{
+    text-decoration: none;
+}
+/* mediau */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* larg */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+/* Animation Started */
+  body {
+      margin: 0;
+      
+    }
+
+    /* splash section */
+    .splash {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #ffffff, #dcdcdc);
+      z-index: 1000;
+      flex-direction: column;
+      gap: 20px;
+      transition: opacity 1s ease, visibility 1s ease;
+    }
+
+    .splash.hidden {
+      opacity: 0;
+      visibility: hidden;
+      overflow: hidden;
+    }
+
+    .line {
+      font-size: 3rem;
+      font-weight: 500;
+      color: #333;
+      opacity: 0;
+      animation: fadeIn 1.5s forwards;
+      background: linear-gradient(to right , #2196F3 , blue);
+    background-clip: text;
+    color: transparent;
+    }
+
+    .line:nth-child(1) {
+      animation-delay: 0.5s;
+      
+    }
+
+    .line:nth-child(2) {
+      animation-delay: 2s;
+    }
+
+    .line:nth-child(3) {
+      font-size: 5rem;
+      font-weight: bold;
+      letter-spacing: 3px;
+      font-family: "Cairo", sans-serif;
+      animation-delay: 2s;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* main content */
+    .main {
+      display: none;
+      text-align: center;
+    }
+
+    .main.visible {
+      display: block;
+    }
+
+    /* responsive */
+    @media (max-width: 600px) {
+      .line {
+        font-size: 1.5rem;
+      }
+      .line:nth-child(3) {
+    font-size: 2.5rem;
+        
+      }
+    }
+/* Animation Started */
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding : 10px 50px 0 50px;
+    box-shadow:0px 0px 15px 0px #ddd;
+}
+
+.header .logo{
+    position: relative;
+}
+
+@media (max-width: 950px) {
+    .header{
+        flex-direction: column;
+        padding: 20px 0 0 0;
+    }
+}
+.header .logo h1{
+    font-family: "Edu NSW ACT Cursive", cursive;
+    background: linear-gradient(to right , #2196F3 , blue);
+    background-clip: text;
+    color: transparent;
+    font-size: 2.5rem;
+}
+.header .logo i{
+    position: absolute;
+    right: 0;
+    top: -10px;
+    font-size: 25px;
+    background: linear-gradient(to right , #2196F3 , blue);
+    background-clip: text;
+    color: transparent;
+}
+.header ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.header ul li{
+    font-size: 1.5rem;
+    padding: 25px 0;
+    text-align: center;
+    text-transform: capitalize;
+    position: relative;
+    margin: 0 20px;
+}
+@media (max-width: 950px) {
+    .header ul li{
+        font-size: 18px;
+        margin: 0 15px;
+        padding: 15px 0   ;
+    }
+}
+
+.header ul li::before{
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 5px;
+    background-color: #2196F3;
+    transition: .5s;
+}
+@media (max-width: 950px) {
+    .header ul li::before{
+        display: none;
+    }
+}
+.header ul li:hover::before{
+    width: 100%;
+}
+
+.header ul li::after{
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 0;
+    transition: .5s;
+    background-color: #dddddd42;
+    z-index: -1;
+}
+.header ul li:hover::after{
+    height: calc(100% + 2px);
+}
+.header ul li a{
+    color: black;
+    transition: .5s;
+}
+.header ul li:hover a{
+    color: #2196F3;
+}
+/* end header */
+
+/* start landing */
+.landing{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(175deg, #ececec 80%, #ffffff 80%, #ffffff 100%);
+    min-height: calc(100vh - 105px);
+    
+}
+.landing .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.landing .container .title{
+    width: 50%;
+    text-transform: capitalize;
+}
+.landing .container .title h2{
+    font-size: 4rem;
+    line-height: 1.4;
+    background: linear-gradient(to right, #40abf4, #E91E63);;
+    background-clip: text;
+    color: transparent;
+}
+.landing .container .title h2 .sina{
+    text-transform: uppercase;
+}
+.landing .container .title .par{
+    background: linear-gradient(to right, #40abf4, #E91E63);;
+    background-clip: text;
+    color: transparent;
+}
+@media (max-width: 950px) {
+    .landing .container .title p {
+        font-size: 22px;
+    }
+}
+.landing .container .img-land{
+    width: 50%;
+    animation: moveUpDown 3.5s ease-in-out infinite;
+}
+.landing .container .img-land img{
+    width: 100%;
+}
+@media (max-width: 950px) {
+    .landing{
+        padding: 30px 10px;
+    }
+    .landing .container{
+        flex-direction: column;
+    }
+    .landing .container .title{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .landing .container .img-land{
+        width: 100%;
+    }
+    
+}
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+/* end landing */
+
+
